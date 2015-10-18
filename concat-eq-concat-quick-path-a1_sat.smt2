@@ -9,6 +9,6 @@
 (assert (= (Concat X Y) (Concat U V)))
 
 (assert (or (= Y "abc") (= Y "def")))
-(assert (or (= V "xyz") (= V ("abc"))))
+(assert (or (= V "xyz") (= V "abc")))
 
 (check-sat)
