@@ -1,3 +1,6 @@
 # emacs temp files
 *~
+# solver residue
+.z3-trace
+log
 
