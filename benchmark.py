@@ -98,6 +98,66 @@ def read_parameters(params):
     if 'RunS3' in params:
         run_s3 = (params['RunS3'] == 'yes')
 
+## Z3 test runner
+
+z3_solver = ''
+
+def read_z3_parameters(params):
+    global z3_solver
+    if 'Solver' in params:
+        z3_solver = params['Solver']
+    else:
+        raise Exception("[z3] section must specify path to solver")
+
+def test_with_z3(testfile):
+    runtime = ''
+    result = ''
+    verify = ''
+    error = ''
+
+    try:
+        startTime = time.time()
+        (exitCode, output, errors) = run(z3_solver + ' ' + testfile, shell=True, timeout=timeout)
+        endTime = time.time()
+        runtime = str(round( float(endTime - startTime), 3))
+        if len(output) == 0:
+            result = 'timeout'
+        else:
+            lines = output.split("\n")
+            errlines = errors.split("\n")
+
+            combined_lines = ""
+            for line in lines:
+                combined_lines += " " + line
+            for line in errlines:
+                combined_lines += " " + line    
+            
+            lines = [line for line in lines if line.strip()]
+            # check result status
+            for line in lines:
+                if 'unsat' in line:
+                    result = 'unsat'
+                    error = ''
+                    break
+                elif 'sat' in line:
+                    result = 'sat'
+                    error = ''
+                    break
+                elif 'unknown' in line:
+                    result = 'unknown'
+                    error = ''
+                    break
+                else:
+                    result = 'error'
+                    error = combined_lines
+            # TODO verify, and check verify status
+    except Exception as e:
+        result = 'crash'
+        error = str(e)
+        
+    return TestResult(runtime, result, verify, error)
+
+    
 ## Z3str2 test runner
 
 z3str2_solver = ''
@@ -161,6 +221,7 @@ def test_with_z3str2(rawfile):
                     break
                 elif 'UNKNOWN' in line:
                     result = 'unknown'
+                    error = ''
                     break
                 else:
                     result = 'error'
@@ -187,6 +248,9 @@ def main():
     if 'parameters' in config:
         read_parameters(config['parameters'])
 
+    if run_z3:
+        read_z3_parameters(config['z3'])
+        
     if run_z3str2:
         read_z3str2_parameters(config['z3str2'])
         
@@ -198,10 +262,12 @@ def main():
         files.sort()
         print("Found " + str(len(files)) + " tests.")
         for f in files:
+            print(f)
             testpath = join(testdir, f)
             testcase = TestCase(f)
             if run_z3:
-                pass # TODO
+                z3_result = test_with_z3(testpath)
+                testcase.solverResult['z3'] = z3_result
             if run_z3str2:
                 z3str2_result = test_with_z3str2(testpath)
                 testcase.solverResult['z3str2'] = z3str2_result
@@ -211,7 +277,7 @@ def main():
     for testcase in tests:
         print(testcase.filename + ":")
         if run_z3:
-            pass # TODO
+            print("Z3\t" + str(testcase.solverResult['z3']))
         if run_z3str2:
             print("Z3-str2\t" + str(testcase.solverResult['z3str2']))
     print("===================")
