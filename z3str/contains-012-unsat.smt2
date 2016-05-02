@@ -1,0 +1,24 @@
+(set-logic QF_S)
+(set-info :status unknown)
+(declare-const x String)
+(declare-const y String)
+(declare-const z String)
+(declare-const b1 bool)
+(declare-const b2 bool)
+(declare-const b3 bool)
+
+
+(assert (= b1 (Contains x z ) ) )
+
+(assert (= b2 (Contains y z ) ) )
+
+(assert (= b3 (= y x ) ) )
+
+(assert b1)
+
+(assert (not b2))
+
+(assert b3)
+
+(check-sat)
+(get-model)
