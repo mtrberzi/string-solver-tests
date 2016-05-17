@@ -263,10 +263,8 @@ def main():
     # read all test cases
     tests = []
     for testdir in testDirs:
-        tapOutput.write("# Running tests in " + testdir + "\n")
         files = findTests(testdir)
         files.sort()
-        tapOutput.write("# Found " + str(len(files)) + " tests.\n")
         # for now we just look at 'z3' results for TAP output, so
         # 1 test point per case (solver decided SAT/UNSAT)
         nTestPoints = len(files)
