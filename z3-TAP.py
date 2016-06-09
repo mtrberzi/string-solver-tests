@@ -262,13 +262,13 @@ def main():
         
     # read all test cases
     tests = []
+    nTestPoints = 0
     for testdir in testDirs:
         files = findTests(testdir)
         files.sort()
         # for now we just look at 'z3' results for TAP output, so
         # 1 test point per case (solver decided SAT/UNSAT)
-        nTestPoints = len(files)
-        tapOutput.write("1.." + str(nTestPoints) + "\n")
+        nTestPoints += len(files)
         
         for f in files:
             testpath = join(testdir, f)
@@ -281,6 +281,7 @@ def main():
                 testcase.solverResult['z3str2'] = z3str2_result
             tests.append(testcase)
 
+    tapOutput.write("1.." + str(nTestPoints) + "\n")
     testpoint = 1
     for testcase in tests:
         name = testcase.filename
