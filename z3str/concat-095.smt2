@@ -1,5 +1,5 @@
 (set-logic QF_S)
-(set-info :status unknown)
+(set-info :status sat)
 (declare-const x String)
 (declare-const y1 String)
 (declare-const y2 String)

@@ -1,5 +1,5 @@
 (set-logic QF_S)
-(set-info :status unknown)
+(set-info :status sat)
 (declare-const some_condition Bool)
 (declare-const t String)
 (declare-const u String)
