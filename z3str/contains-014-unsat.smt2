@@ -4,9 +4,9 @@
 (declare-const x2 String)
 (declare-const y String)
 (declare-const z String)
-(declare-const b1 bool)
-(declare-const b2 bool)
-(declare-const b3 bool)
+(declare-const b1 Bool)
+(declare-const b2 Bool)
+(declare-const b3 Bool)
 
 
 (assert (= b1 (Contains x1 y ) ) )
