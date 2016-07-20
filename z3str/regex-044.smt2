@@ -1,5 +1,6 @@
 (set-logic QF_S)
 (set-info :status sat)
+
 (declare-const x String)
 (declare-const y String)
 (declare-const m String)
@@ -7,16 +8,16 @@
 
 
 
-(assert (RegexIn x (RegexStar (RegexDigit "") ) ) )
+(assert (RegexIn x (RegexStar (RegexCharRange "0" "9") ) ) )
 
-(assert (= 5 (Length x) ) )
+(assert (= 1 (Length x) ) )
 
 (assert (not (= x "1") ) )
 (assert (not (= x "0") ) )
 (assert (not (= x "3") ) )
 (assert (not (= x "2") ) )
 (assert (not (= x "8") ) )
-(assert (not (= x "5") ) )
+; (assert (not (= x "5") ) )
 (assert (not (= x "6") ) )
 (assert (not (= x "4") ) )
 (assert (not (= x "9") ) )
