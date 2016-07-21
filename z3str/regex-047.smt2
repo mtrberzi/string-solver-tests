@@ -5,7 +5,7 @@
 (declare-const val String)
 
 (define-fun QuoteRegex ((aRegex Regex)) Regex 
-    (RegexConcat (RegexConcat (Str2Reg "\"") aRegex) (Str2Reg "\"")))
+    (RegexConcat (RegexConcat (Str2Reg """") aRegex) (Str2Reg """")))
 
 (assert (RegexIn key (QuoteRegex (RegexStar (Str2Reg "a")))))
 
