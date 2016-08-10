@@ -6,7 +6,7 @@
 
 
 (assert (= x "abc\\nefg  " ) )
-(assert (= y1 "z_\t_z-\\t-\\\\'=\\\"_z" ) )
+(assert (= y1 "z_\t_z-\\t-\\\\'=\\""_z" ) )
 
 
 (check-sat)
