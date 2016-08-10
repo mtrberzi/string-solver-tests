@@ -2,7 +2,7 @@
 (set-info :status sat)
 (declare-const x String)
 (declare-const z String)
-(declare-const b1 bool)
+(declare-const b1 Bool)
 
 (assert (= true (StartsWith x "nba") ) )
 

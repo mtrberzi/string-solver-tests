@@ -7,9 +7,9 @@
 (declare-const z1 String)
 (declare-const z2 String)
 
-(declare-const b1 bool)
-(declare-const b2 bool)
-(declare-const b3 bool)
+(declare-const b1 Bool)
+(declare-const b2 Bool)
+(declare-const b3 Bool)
 
 (assert (Contains x2 x1))
 
