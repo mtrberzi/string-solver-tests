@@ -121,7 +121,7 @@ def test_with_z3(testfile):
 
     try:
         startTime = time.time()
-        (exitCode, output, errors) = run(z3_solver + ' model_validate=true ' + testfile, shell=True, timeout=timeout)
+        (exitCode, output, errors) = run(z3_solver + ' -smt2 model_validate=true ' + testfile, shell=True, timeout=timeout)
         endTime = time.time()
         runtime = str(round( float(endTime - startTime), 3))
         if len(output) == 0:
