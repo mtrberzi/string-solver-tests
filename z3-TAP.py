@@ -121,7 +121,7 @@ def test_with_z3(testfile):
 
     try:
         startTime = time.time()
-        (exitCode, output, errors) = run(z3_solver + ' ' + testfile, shell=True, timeout=timeout)
+        (exitCode, output, errors) = run(z3_solver + ' -smt2 model_validate=true ' + testfile, shell=True, timeout=timeout)
         endTime = time.time()
         runtime = str(round( float(endTime - startTime), 3))
         if len(output) == 0:
@@ -154,7 +154,13 @@ def test_with_z3(testfile):
                 else:
                     result = 'error'
                     error = combined_lines
-            # TODO verify, and check verify status
+            # if the result is 'sat', check lines again for "invalid model"
+            if result == 'sat':
+                verify = 'v-ok'
+                for line in lines:
+                    if 'invalid model' in line:
+                        verify = 'v-fail'
+                        break
     except Exception as e:
         result = 'crash'
         error = str(e)
@@ -287,13 +293,14 @@ def main():
         name = testcase.filename
         solverOutput = testcase.solverResult['z3']
         result = solverOutput.result
+        verify = solverOutput.verify
         solverOK = False
-        if result == 'sat' or result == 'unsat':
+        if (result == 'sat' and verify == 'v-ok') or result == 'unsat':
             solverOK = True
         if solverOK:
             tapOutput.write("ok " + str(testpoint) + " - " + name + " - Solver gave a SAT/UNSAT result\n")
         else:
-            tapOutput.write("not ok " + str(testpoint) + " - " + name + " - Solver gave a SAT/UNSAT result (" + result + ")\n")
+            tapOutput.write("not ok " + str(testpoint) + " - " + name + " - Solver gave a SAT/UNSAT result (" + result + " " + verify + ")\n")
         testpoint += 1
                 
     tapOutput.close()

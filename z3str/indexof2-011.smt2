@@ -5,9 +5,9 @@
 (declare-const aURL String)
 
 
-// var aURL = "http://www.tizag.com/www.html";
-// var aPosition = aURL.indexOf("www");
-// var secondPos = aURL.indexOf("www", aPosition + 1);
+; var aURL = "http://www.tizag.com/www.html";
+; var aPosition = aURL.indexOf("www");
+; var secondPos = aURL.indexOf("www", aPosition + 1);
 
 (assert (= "http://www.tizag.com/www.html" aURL) )
 (assert (= aPosition (Indexof  aURL  "www") ) )
