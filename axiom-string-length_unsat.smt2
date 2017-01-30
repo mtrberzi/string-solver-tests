@@ -5,6 +5,6 @@
 (declare-const Y String)
 
 (assert (= X Y))
-(assert (not (= (Length X) (Length Y))))
+(assert (not (= (str.len X) (str.len Y))))
 
 (check-sat)

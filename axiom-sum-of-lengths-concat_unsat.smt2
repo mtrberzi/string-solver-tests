@@ -4,8 +4,8 @@
 (declare-const X String)
 (declare-const Y String)
 
-(assert (= (Length (Concat X Y)) 6))
-(assert (= (Length X) 2))
-(assert (= (Length Y) 3))
+(assert (= (str.len (str.++ X Y)) 6))
+(assert (= (str.len X) 2))
+(assert (= (str.len Y) 3))
 
 (check-sat)

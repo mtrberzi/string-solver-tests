@@ -3,6 +3,6 @@
 
 (declare-const X String)
 
-(assert (= (Concat "abc" X) "abcdef"))
+(assert (= (str.++ "abc" X) "abcdef"))
 
 (check-sat)

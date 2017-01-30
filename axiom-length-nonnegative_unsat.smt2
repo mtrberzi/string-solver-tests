@@ -3,6 +3,6 @@
 
 (declare-const X String)
 
-(assert (= (Length X) -1))
+(assert (= (str.len X) -1))
 
 (check-sat)

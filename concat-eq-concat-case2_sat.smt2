@@ -5,6 +5,6 @@
 (declare-const Y String)
 (declare-const U String)
 
-(assert (= (Concat X Y) (Concat U "def")))
+(assert (= (str.++ X Y) (str.++ U "def")))
 
 (check-sat)

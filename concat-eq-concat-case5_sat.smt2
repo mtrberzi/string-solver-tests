@@ -4,6 +4,6 @@
 (declare-const X String)
 (declare-const U String)
 
-(assert (= (Concat X "cdef") (Concat U "def")))
+(assert (= (str.++ X "cdef") (str.++ U "def")))
 
 (check-sat)

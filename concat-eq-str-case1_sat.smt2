@@ -1,6 +1,6 @@
 (set-logic QF_S)
 (set-info :status sat)
 
-(assert (= (Concat "abc" "xyz") "abcxyz"))
+(assert (= (str.++ "abc" "xyz") "abcxyz"))
 
 (check-sat)
