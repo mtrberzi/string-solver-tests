@@ -3,7 +3,7 @@
 (declare-const x String)
 (declare-const y String)
 
-(assert (= "efg" (Substring x 1 3) ) )
+(assert (= "efg" (str.substr x 1 3) ) )
 (assert (= (str.len x) 4) )
 
 

@@ -4,7 +4,7 @@
 (declare-const y String)
 
 
-(assert (= y (Replace "mn_efgefg_k" "efg" "abcd")  ) )
+(assert (= y (str.replace "mn_efgefg_k" "efg" "abcd")  ) )
 
 
 (check-sat)

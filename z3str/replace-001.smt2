@@ -5,7 +5,7 @@
 (declare-const u String)
 
 (assert (ite some_condition (= t "a") (= t "b") ) )
-(assert (= u (Replace "ab" t "z") ) )
+(assert (= u (str.replace "ab" t "z") ) )
 
 (check-sat)
 (get-model)

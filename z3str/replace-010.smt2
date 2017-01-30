@@ -8,9 +8,9 @@
 (declare-const z String)
 
 
-(assert (= y (Replace x "'" "\\'")) )  ;replacing ‘ with \\' 
+(assert (= y (str.replace x "'" "\\'")) )  ;replacing ‘ with \\' 
 
-(assert (= z (Replace x "p" "_p")) ) ; replacing the letter p with _p 
+(assert (= z (str.replace x "p" "_p")) ) ; replacing the letter p with _p 
 
 
 (check-sat) 

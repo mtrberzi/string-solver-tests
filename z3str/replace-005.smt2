@@ -3,7 +3,7 @@
 (declare-const x String)
 (declare-const y String)
 
-(assert (= y (Replace x "efg" "abcd")  ) )
+(assert (= y (str.replace x "efg" "abcd")  ) )
 (assert (= y "abcd") )
 
 (check-sat)

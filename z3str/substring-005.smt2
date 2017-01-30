@@ -8,9 +8,9 @@
 (declare-const x String)
 
 
-(assert (= "efg" (Substring x vi1 vi2) ) )
-(assert (= "bef" (Substring x vi3 vi4) ) )
-(assert (= "*v*" (Substring x vi5 3) ) )
+(assert (= "efg" (str.substr x vi1 vi2) ) )
+(assert (= "bef" (str.substr x vi3 vi4) ) )
+(assert (= "*v*" (str.substr x vi5 3) ) )
 (assert (<= (str.len x) 9))
 
 

@@ -5,7 +5,7 @@
 (declare-const x String)
 
 
-(assert (= "efgh" (Substring x vi1 vi2) ) )
+(assert (= "efgh" (str.substr x vi1 vi2) ) )
 (assert (= (str.len x) 4) )
 
 

@@ -8,6 +8,6 @@
 (assert (= S "abcdef"))
 (assert (or (= Pos 0) (= Pos 1) (= Pos 2)))
 (assert (= Len 2))
-(assert (= X (Substring S Pos Len)))
+(assert (= X (str.substr S Pos Len)))
 
 (check-sat)

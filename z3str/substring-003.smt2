@@ -5,8 +5,8 @@
 (declare-const x String)
 
 
-(assert (= "efg" (Substring x 1 3) ) )
-(assert (= "bef" (Substring x 0 3) ) )
+(assert (= "efg" (str.substr x 1 3) ) )
+(assert (= "bef" (str.substr x 0 3) ) )
 
 
 

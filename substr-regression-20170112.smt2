@@ -2,6 +2,6 @@
 
 (declare-const X String)
 
-(assert (or (= X "abc") (= X (Substring "abcdef" 8 3))))
+(assert (or (= X "abc") (= X (str.substr "abcdef" 8 3))))
 
 (check-sat)
