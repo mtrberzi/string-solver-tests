@@ -2,7 +2,7 @@
 (set-info :status sat)
 (declare-const x String)
 
-(assert (not (Contains x "efg" ) ) )
+(assert (not (str.contains x "efg" ) ) )
 
 (check-sat)
 (get-model)

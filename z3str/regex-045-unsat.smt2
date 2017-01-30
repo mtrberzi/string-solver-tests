@@ -7,7 +7,7 @@
 
 
 
-(assert (not (RegexIn x (RegexStar (Str2Reg "abc") ) ) ) )
+(assert (not (str.in.re x (re.* (str.to.re "abc") ) ) ) )
 (assert (= x "abc") )
 
 

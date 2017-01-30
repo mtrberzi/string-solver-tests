@@ -2,8 +2,8 @@
 (set-info :status unsat)
 (declare-const x String)
 
-(assert (not (Contains x "ef" ) ) )
-(assert (Contains x "efg" ) )
+(assert (not (str.contains x "ef" ) ) )
+(assert (str.contains x "efg" ) )
 
 
 (check-sat)

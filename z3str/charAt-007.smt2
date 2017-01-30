@@ -4,7 +4,7 @@
 (declare-const i Int)
 
 
-(assert (= "b" (CharAt x i) ) )
+(assert (= "b" (str.at x i) ) )
 
 (assert (and (>= i 4) (< i (str.len x))))
 

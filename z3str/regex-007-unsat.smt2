@@ -4,8 +4,8 @@
 
 
 (assert (= (str.len x) 8))
-(assert (RegexIn x (RegexStar (Str2Reg "ced") ) ) ) 
-(assert (RegexIn x (RegexStar (Str2Reg "abcd") ) ) ) 
+(assert (str.in.re x (re.* (str.to.re "ced") ) ) ) 
+(assert (str.in.re x (re.* (str.to.re "abcd") ) ) ) 
 
 
 (check-sat)

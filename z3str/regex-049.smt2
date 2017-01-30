@@ -4,7 +4,7 @@
 (declare-const key String)
 (declare-const val String)
 
-(assert (RegexIn key (RegexStar (RegexCharRange "a" "b"))) )
+(assert (str.in.re key (re.* (re.range "a" "b"))) )
 (assert (<= 5 (str.len key)))
 (assert (>= 7 (str.len key)))
 

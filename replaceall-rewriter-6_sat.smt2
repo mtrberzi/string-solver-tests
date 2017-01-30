@@ -1,5 +1,5 @@
 (set-info :status sat)
 
-(assert (= "ac" (str.replace-all "abc" (Str2Reg "b") "")))
+(assert (= "ac" (str.replace-all "abc" (str.to.re "b") "")))
 
 (check-sat)

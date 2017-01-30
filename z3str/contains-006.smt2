@@ -3,7 +3,7 @@
 (declare-const x String)
 (declare-const bv Bool)
 
-(assert (= bv (Contains x "efk" ) ) )
+(assert (= bv (str.contains x "efk" ) ) )
 (assert (= x "efk" ) )
 
 

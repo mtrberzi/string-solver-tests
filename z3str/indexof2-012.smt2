@@ -10,7 +10,7 @@
 ; var secondPos = aURL.indexOf("www", aPosition + 1);
 
 (assert (= "http://www.tizag.com/www.html" aURL) )
-(assert (= aPosition (Indexof  aURL  "www") ) )
+(assert (= aPosition (str.indexof  aURL  "www") ) )
 (assert (= secondPos (Indexof2  aURL  "www" (+ aPosition 30) ) ) )
 
 

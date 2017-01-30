@@ -5,9 +5,9 @@
 (declare-const val String)
 
 (define-fun QuoteRegex ((aRegex Regex)) Regex 
-    (Regexstr.++ (Regexstr.++ (Str2Reg """") aRegex) (Str2Reg """")))
+    (re.++ (re.++ (str.to.re """") aRegex) (str.to.re """")))
 
-(assert (RegexIn key (QuoteRegex (RegexStar (Str2Reg "a")))))
+(assert (str.in.re key (QuoteRegex (re.* (str.to.re "a")))))
 
 (assert (= (str.len key) 2)) 
 

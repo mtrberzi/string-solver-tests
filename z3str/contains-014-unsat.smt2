@@ -9,11 +9,11 @@
 (declare-const b3 Bool)
 
 
-(assert (= b1 (Contains x1 y ) ) )
+(assert (= b1 (str.contains x1 y ) ) )
 
-(assert (= b2 (Contains x2 z ) ) )
+(assert (= b2 (str.contains x2 z ) ) )
 
-(assert (= b3 (Contains y z ) ) )
+(assert (= b3 (str.contains y z ) ) )
 
 (assert (= x1 x2))
 

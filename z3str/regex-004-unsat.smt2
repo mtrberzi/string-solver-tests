@@ -5,7 +5,7 @@
 
 ;(assert (= x "abcdabcdabcdabcd"))
 (assert (= x "abcdcde"))
-(assert (RegexIn x (RegexUnion (RegexStar (Str2Reg "abcd") ) (RegexStar (Str2Reg "cde") ) ) ) )
+(assert (str.in.re x (re.union (re.* (str.to.re "abcd") ) (re.* (str.to.re "cde") ) ) ) )
 
 
 

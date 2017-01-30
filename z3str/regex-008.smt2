@@ -4,7 +4,7 @@
 (declare-const y String)
 
 
-(assert (RegexIn x (Str2Reg "abc") ) )
+(assert (str.in.re x (str.to.re "abc") ) )
 
 
 

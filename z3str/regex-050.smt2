@@ -5,9 +5,9 @@
 (declare-const y String)
 
 (assert (= (str.len x) 2))
-; (assert (RegexIn x (RegexStar (RegexCharRange "a" "b"))))
+; (assert (str.in.re x (re.* (re.range "a" "b"))))
 (assert (= x y))
-(assert (RegexIn y (RegexStar (RegexCharRange "a" "b"))))
+(assert (str.in.re y (re.* (re.range "a" "b"))))
 (assert (StartsWith x "1"))
 
 (check-sat)

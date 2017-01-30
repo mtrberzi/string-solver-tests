@@ -7,11 +7,11 @@
 
 (assert (= (str.++ x y) (str.++ m n) ) )
 
-(assert (RegexIn n (RegexStar (Str2Reg "abc") ) ) )
+(assert (str.in.re n (re.* (str.to.re "abc") ) ) )
 
 (assert (> (str.len x) (str.len m) ) )
 
-;(assert (RegexIn x (RegexStar (Regexstr.++ (RegexStar (Str2Reg "a") ) (Str2Reg "b") ))))
+;(assert (str.in.re x (re.* (re.++ (re.* (str.to.re "a") ) (str.to.re "b") ))))
 
 
 

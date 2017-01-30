@@ -4,9 +4,9 @@
 (declare-const y String)
 
 
-(assert (RegexIn x (RegexStar (Regexstr.++ (RegexStar (Str2Reg "a") ) (Str2Reg "b") ))))
+(assert (str.in.re x (re.* (re.++ (re.* (str.to.re "a") ) (str.to.re "b") ))))
 
-(assert (RegexIn y (RegexStar (Regexstr.++ (RegexStar (Str2Reg "a") ) (Str2Reg "b") ))))
+(assert (str.in.re y (re.* (re.++ (re.* (str.to.re "a") ) (str.to.re "b") ))))
       
 (assert (not (= x y)))
 (assert (= (str.len x) (str.len y)))

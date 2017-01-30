@@ -5,7 +5,7 @@
 (declare-const i Int)
 
 
-(assert (= i (Indexof get_fileName  ".php") ) )
+(assert (= i (str.indexof get_fileName  ".php") ) )
 (assert (> i 0 ) )
 (assert (= (+ i 4) (str.len get_fileName) ) )
 ; (assert (= name0 "efg" ) )

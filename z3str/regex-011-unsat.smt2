@@ -4,8 +4,8 @@
 (declare-const y String)
 
 
-(assert (RegexIn x (RegexStar (Str2Reg "abcd") ) ) )
-(assert (RegexIn y (RegexStar (Str2Reg "abcd") ) ) )
+(assert (str.in.re x (re.* (str.to.re "abcd") ) ) )
+(assert (str.in.re y (re.* (str.to.re "abcd") ) ) )
 
 (assert (= (str.len x)  6) )
 

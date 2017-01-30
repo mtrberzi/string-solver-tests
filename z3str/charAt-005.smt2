@@ -5,7 +5,7 @@
 (declare-const var2 Int)
 (declare-const var3 Int)
 
-(assert (= x (CharAt str var2) ) )
+(assert (= x (str.at str var2) ) )
 (assert (< (str.len str) 10))
 (assert (> var2 10))
 

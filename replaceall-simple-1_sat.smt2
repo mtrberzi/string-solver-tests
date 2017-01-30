@@ -4,7 +4,7 @@
 (declare-const Result String)
 
 (assert (= R "b"))
-(assert (= Result (str.replace-all "aaa" (Str2Reg "a") R)))
+(assert (= Result (str.replace-all "aaa" (str.to.re "a") R)))
 (assert (= Result "bbb"))
 
 (check-sat)

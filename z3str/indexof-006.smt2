@@ -2,7 +2,7 @@
 (set-info :status sat)
 (declare-const i Int)
 
-(assert (= i (Indexof "abcdefg" "hh") ) )
+(assert (= i (str.indexof "abcdefg" "hh") ) )
 
 (check-sat)
 (get-model)

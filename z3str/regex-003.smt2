@@ -4,7 +4,7 @@
 
 
 (assert (= x "cdeabcdcde"))
-(assert (RegexIn x (RegexStar (RegexUnion (Str2Reg "abcd") (Str2Reg "cde") ) ) ) )
+(assert (str.in.re x (re.* (re.union (str.to.re "abcd") (str.to.re "cde") ) ) ) )
 
 
 

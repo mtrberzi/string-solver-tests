@@ -5,7 +5,7 @@
 
 
 (assert (= x "aaaaefg" ) )
-(assert (= vi1 (Indexof x "efg") ) )
+(assert (= vi1 (str.indexof x "efg") ) )
 
 
 (check-sat)

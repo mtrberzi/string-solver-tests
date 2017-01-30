@@ -12,7 +12,7 @@
 (declare-const b3 Bool)
 
 
-(assert (= b1 (Contains x1 "abc" ) ) )
+(assert (= b1 (str.contains x1 "abc" ) ) )
 
 (assert (= x1 "123bbaacc123") )
 

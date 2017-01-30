@@ -6,9 +6,9 @@
 (declare-const var3 Int)
 
 (assert (= str "Hello world!" ) )
-(assert (= var1 (LastIndexof str "Hello") ) )
-(assert (= var2 (LastIndexof str "World") ) )
-(assert (= var3 (LastIndexof str "world") ) )
+(assert (= var1 (str.lastindexof str "Hello") ) )
+(assert (= var2 (str.lastindexof str "World") ) )
+(assert (= var3 (str.lastindexof str "world") ) )
 
 
 (check-sat)

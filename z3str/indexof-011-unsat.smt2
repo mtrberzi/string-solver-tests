@@ -7,7 +7,7 @@
 
 
 (assert (= Str1 "###ab") ) 
-(assert (= i1 (Indexof Str1 "##") ) )
+(assert (= i1 (str.indexof Str1 "##") ) )
 (assert (> i1 0 ) )
 
 (check-sat)

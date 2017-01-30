@@ -8,7 +8,7 @@
 
 
 
-(assert (RegexIn x (RegexStar (RegexCharRange "0" "9") ) ) )
+(assert (str.in.re x (re.* (re.range "0" "9") ) ) )
 
 (assert (= 1 (str.len x) ) )
 

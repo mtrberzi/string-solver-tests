@@ -5,7 +5,7 @@
 (declare-const var2 Int)
 (declare-const var3 Int)
 
-(assert (= "*" (CharAt str var2) ) )
+(assert (= "*" (str.at str var2) ) )
 (assert (= var2 3))
 
 

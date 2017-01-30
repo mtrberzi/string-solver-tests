@@ -5,7 +5,7 @@
 
 
 (assert (= x ""))
-(assert (RegexIn x (RegexStar (Str2Reg "ced") ) ) ) 
+(assert (str.in.re x (re.* (str.to.re "ced") ) ) ) 
 
 (check-sat)
 (get-model)

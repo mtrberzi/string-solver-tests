@@ -3,7 +3,7 @@
 (declare-const i Int)
 (declare-const X String)
 
-(assert (= i (LastIndexof X "abcd") ) )
+(assert (= i (str.lastindexof X "abcd") ) )
 (assert (= X "abcd1234abc" ) )
 
 (check-sat)

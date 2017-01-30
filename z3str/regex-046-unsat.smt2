@@ -3,7 +3,7 @@
 
 (declare-const x String)
 
-(assert (RegexIn x (RegexPlus (Str2Reg "a") ) ) )
+(assert (str.in.re x (re.+ (str.to.re "a") ) ) )
 
 (assert (> 1 (str.len x) ) )
 

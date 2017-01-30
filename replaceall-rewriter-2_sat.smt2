@@ -1,4 +1,4 @@
 (set-info :status sat)
 
-(assert (= "def def" (str.replace-all "abc abc" (Str2Reg "abc") "def") ))
+(assert (= "def def" (str.replace-all "abc abc" (str.to.re "abc") "def") ))
 (check-sat)

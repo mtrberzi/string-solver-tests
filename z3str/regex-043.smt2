@@ -7,7 +7,7 @@
 
 
 
-(assert (RegexIn x (RegexStar (RegexUnion (Str2Reg "a") (Str2Reg "b") ) ) ) )
+(assert (str.in.re x (re.* (re.union (str.to.re "a") (str.to.re "b") ) ) ) )
 
 (assert (= 3 (str.len x) ) )
 

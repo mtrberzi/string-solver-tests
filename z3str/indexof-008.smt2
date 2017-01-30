@@ -3,7 +3,7 @@
 (declare-const i Int)
 (declare-const X String)
 
-(assert (= i (Indexof "a" "ab") ) )
+(assert (= i (str.indexof "a" "ab") ) )
 
 
 (check-sat)
