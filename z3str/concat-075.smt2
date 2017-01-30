@@ -6,8 +6,8 @@
 (declare-const y2 String)
 (declare-const m2 String)
 
-(assert (= (Concat "ef" y2) (Concat x1 x2)) )
-(assert(= (Concat x3 (Concat "ce" m2)) (Concat "ef" y2)) )
+(assert (= (str.++ "ef" y2) (str.++ x1 x2)) )
+(assert(= (str.++ x3 (str.++ "ce" m2)) (str.++ "ef" y2)) )
 
 
 (check-sat)

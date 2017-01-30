@@ -6,7 +6,7 @@
 
 (assert (RegexIn x (RegexStar (Str2Reg ".") ) ) ) 
 
-(assert (= 5 (Length x)))
+(assert (= 5 (str.len x)))
 
 (assert (not (= x ".....")))
 

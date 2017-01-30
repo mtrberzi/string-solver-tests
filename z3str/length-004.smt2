@@ -5,9 +5,9 @@
 
 
 (assert (= y x) )
-(assert (= (Length y) 4) )
+(assert (= (str.len y) 4) )
 (assert (or (= x "fg") (= x "abcd") ) )
-;(assert (<= (Length y) 5) )
+;(assert (<= (str.len y) 5) )
 
 (check-sat)
 (get-model)

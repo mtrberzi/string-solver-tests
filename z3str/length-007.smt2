@@ -5,10 +5,10 @@
 (declare-const y1 String)
 (declare-const y2 String)
 
-(assert (= (Concat x1 x2) "testhello") )
-(assert (= (Length x1) 1) )
-(assert (= (Concat y1 y2) "testhello") )
-(assert (= (Length y2) 5) )
+(assert (= (str.++ x1 x2) "testhello") )
+(assert (= (str.len x1) 1) )
+(assert (= (str.++ y1 y2) "testhello") )
+(assert (= (str.len y2) 5) )
 
 
 (check-sat)

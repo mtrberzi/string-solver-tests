@@ -5,9 +5,9 @@
 (declare-const z String)
 
 
-(assert (= (Concat x y) (Concat z "abc") ) )
-(assert (= (Length z) 0 ) )
-(assert (= (Length x) 2 ) )
+(assert (= (str.++ x y) (str.++ z "abc") ) )
+(assert (= (str.len z) 0 ) )
+(assert (= (str.len x) 2 ) )
 
 
 (check-sat)

@@ -11,10 +11,10 @@
 (declare-const n2 String)
 
 
-(assert (= z (Concat x1 (Concat "abc" x2) ) ) )
-(assert (= z (Concat y1 (Concat "ef" y2) ) ) )
-(assert (= z (Concat m1 (Concat "ce" m2) ) ) )
-(assert (< (Length z) 9) )
+(assert (= z (str.++ x1 (str.++ "abc" x2) ) ) )
+(assert (= z (str.++ y1 (str.++ "ef" y2) ) ) )
+(assert (= z (str.++ m1 (str.++ "ce" m2) ) ) )
+(assert (< (str.len z) 9) )
 
 
 (check-sat)

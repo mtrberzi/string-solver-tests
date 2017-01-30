@@ -6,8 +6,8 @@
 (declare-const Y4 String)
 
 
-(assert (= (Concat x "abc") (Concat "ef" y) ) )
-(assert (= (Concat y Y3) (Concat Y4 x) ) )
+(assert (= (str.++ x "abc") (str.++ "ef" y) ) )
+(assert (= (str.++ y Y3) (str.++ Y4 x) ) )
 
 
 (check-sat)

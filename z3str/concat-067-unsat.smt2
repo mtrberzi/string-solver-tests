@@ -5,8 +5,8 @@
 (declare-const I String)
 (declare-const J String)
 
-(assert (= (Concat X "a" ) (Concat I (Concat "c" J) ) ) )
-(assert (= (Length X) 0 ) )
+(assert (= (str.++ X "a" ) (str.++ I (str.++ "c" J) ) ) )
+(assert (= (str.len X) 0 ) )
 
 (check-sat)
 (get-model)

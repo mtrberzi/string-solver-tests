@@ -4,7 +4,7 @@
 
 (assert (Contains x "efg" ) )
 (assert (Contains x "ef" ) )
-(assert (< (Length x) 5) )
+(assert (< (str.len x) 5) )
 
 
 (check-sat)

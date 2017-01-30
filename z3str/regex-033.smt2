@@ -5,11 +5,11 @@
 (declare-const m String)
 (declare-const n String)
 
-(assert (= (Concat x y) (Concat m n) ) )
+(assert (= (str.++ x y) (str.++ m n) ) )
 
 (assert (RegexIn n (RegexStar (Str2Reg "abc") ) ) )
 
-(assert (< (Length x) (Length m) ) )
+(assert (< (str.len x) (str.len m) ) )
 
 
 

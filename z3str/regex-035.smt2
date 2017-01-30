@@ -7,7 +7,7 @@
 
 
 
-(assert (RegexIn (Concat x y) (RegexStar (Str2Reg "abc") ) ) )
+(assert (RegexIn (str.++ x y) (RegexStar (Str2Reg "abc") ) ) )
 
 
 

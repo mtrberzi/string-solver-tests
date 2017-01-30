@@ -6,7 +6,7 @@
 
 (assert (RegexIn x (RegexStar (RegexUnion (Str2Reg "AB") (Str2Reg "123") ) ) ) )
 
-(assert (= 5 (Length x)))
+(assert (= 5 (str.len x)))
 
 (assert (not (= x "123AB")))
 

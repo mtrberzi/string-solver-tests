@@ -5,7 +5,7 @@
 (declare-const ts1 String)
 (declare-const ts2 String)
 
-(assert (= X (Concat ts0 (Concat "abc" ts2 ) ) ) )
+(assert (= X (str.++ ts0 (str.++ "abc" ts2 ) ) ) )
 (assert (= X "abc") )
 
 

@@ -4,7 +4,7 @@
 (declare-const y String)
 
 (assert (= "efg" (Substring x 1 3) ) )
-(assert (= (Length x) 4) )
+(assert (= (str.len x) 4) )
 
 
 (check-sat)

@@ -8,9 +8,9 @@
 (declare-const m1 String)
 (declare-const m2 String)
 
-(assert (= z (Concat x1 (Concat "c" x2) ) ) )
-(assert (= z (Concat y1 (Concat "e" y2) ) ) )
-(assert (= z (Concat m1 (Concat "ce" m2) ) ) )
+(assert (= z (str.++ x1 (str.++ "c" x2) ) ) )
+(assert (= z (str.++ y1 (str.++ "e" y2) ) ) )
+(assert (= z (str.++ m1 (str.++ "ce" m2) ) ) )
 
 
 (check-sat)

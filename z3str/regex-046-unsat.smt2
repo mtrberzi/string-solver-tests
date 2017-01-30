@@ -5,7 +5,7 @@
 
 (assert (RegexIn x (RegexPlus (Str2Reg "a") ) ) )
 
-(assert (> 1 (Length x) ) )
+(assert (> 1 (str.len x) ) )
 
 
 (check-sat)

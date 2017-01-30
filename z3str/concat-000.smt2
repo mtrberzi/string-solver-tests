@@ -7,7 +7,7 @@
 (declare-const x String)
 
 
-(assert (= a ( Concat ( Concat "te" c1 ) ( Concat "t" c2 ) ) ) )
+(assert (= a ( str.++ ( str.++ "te" c1 ) ( str.++ "t" c2 ) ) ) )
 (assert (= a b) )
 (assert (= x "str  ") )
 

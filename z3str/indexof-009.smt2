@@ -4,7 +4,7 @@
 (declare-const X String)
 
 (assert (= i (Indexof "original" X) ) )
-(assert (= (Length X) 7))
+(assert (= (str.len X) 7))
 (assert (>= i 1) )
 
 

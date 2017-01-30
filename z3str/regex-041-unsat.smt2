@@ -7,11 +7,11 @@
 
 
 
-(assert (RegexIn x (RegexConcat (Str2Reg "a") (RegexStar (Str2Reg "b") ) ) ) )
+(assert (RegexIn x (Regexstr.++ (Str2Reg "a") (RegexStar (Str2Reg "b") ) ) ) )
 
-(assert (RegexIn x (RegexConcat (Str2Reg "c") (RegexStar (Str2Reg "c") ) ) ) )
+(assert (RegexIn x (Regexstr.++ (Str2Reg "c") (RegexStar (Str2Reg "c") ) ) ) )
 
-(assert (RegexIn x (RegexConcat (Str2Reg "a") (RegexConcat (RegexStar (Str2Reg "b") ) (RegexStar (Str2Reg "c") ) ) ) ) )
+(assert (RegexIn x (Regexstr.++ (Str2Reg "a") (Regexstr.++ (RegexStar (Str2Reg "b") ) (RegexStar (Str2Reg "c") ) ) ) ) )
 
 ;(assert (str.in.re s (re.inter
 ;  (re.++ (str.to.re "a") (re.* (str.to.re "b")) 

@@ -10,7 +10,7 @@
 
 (assert (RegexIn x (RegexStar (RegexCharRange "0" "9") ) ) )
 
-(assert (= 1 (Length x) ) )
+(assert (= 1 (str.len x) ) )
 
 (assert (not (= x "1") ) )
 (assert (not (= x "0") ) )

@@ -5,8 +5,8 @@
 (declare-const val String)
 
 (assert (RegexIn key (RegexStar (RegexCharRange "a" "b"))) )
-(assert (<= 5 (Length key)))
-(assert (>= 7 (Length key)))
+(assert (<= 5 (str.len key)))
+(assert (>= 7 (str.len key)))
 
 
 

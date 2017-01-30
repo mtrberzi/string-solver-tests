@@ -5,11 +5,11 @@
 (declare-const z String)
 
 
-(assert (= (Concat x y) (Concat z "abc") ) )
-;(assert (= (Length m) 1 ) )
-;(assert (= (Length n) 1 ) )
-;(assert (= (Length y) 1 ) )
-;(assert (= (Length x) 1 ) )
+(assert (= (str.++ x y) (str.++ z "abc") ) )
+;(assert (= (str.len m) 1 ) )
+;(assert (= (str.len n) 1 ) )
+;(assert (= (str.len y) 1 ) )
+;(assert (= (str.len x) 1 ) )
 
 (check-sat)
 (get-model)

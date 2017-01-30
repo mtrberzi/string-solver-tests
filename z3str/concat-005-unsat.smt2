@@ -7,7 +7,7 @@
 (declare-const b String)
 (declare-const z String)
 
-(assert (= (Concat a "testhello") "hello"))
+(assert (= (str.++ a "testhello") "hello"))
 
 (check-sat)
 (get-model)

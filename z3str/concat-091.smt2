@@ -3,7 +3,7 @@
 (declare-const x String)
 
 
-(assert (= (Concat x "b" ) (Concat "a" x) ) )
+(assert (= (str.++ x "b" ) (str.++ "a" x) ) )
 
 
 

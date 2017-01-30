@@ -4,8 +4,8 @@
 (declare-const y String)
 (declare-const n String)
 
-(assert (= (Concat "abc" n ) (Concat x y ) ) ) 
-(assert (= (Length x) 5 ) )
+(assert (= (str.++ "abc" n ) (str.++ x y ) ) ) 
+(assert (= (str.len x) 5 ) )
 
 (check-sat)
 (get-model)

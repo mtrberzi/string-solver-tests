@@ -11,7 +11,7 @@
 (assert (= "efg" (Substring x vi1 vi2) ) )
 (assert (= "bef" (Substring x vi3 vi4) ) )
 (assert (= "*v*" (Substring x vi5 3) ) )
-(assert (<= (Length x) 9))
+(assert (<= (str.len x) 9))
 
 
 

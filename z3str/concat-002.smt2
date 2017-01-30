@@ -8,7 +8,7 @@
 (declare-const z String)
 (declare-const i Int)
 
-(assert (= (Concat (Concat x y) z) "teest"))
+(assert (= (str.++ (str.++ x y) z) "teest"))
 (assert (= y "es"))
 (assert (= i 15))
 

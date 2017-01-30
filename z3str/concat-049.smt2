@@ -4,10 +4,10 @@
 (declare-const y String)
 (declare-const z String)
 
-(assert (= (Concat x y) (Concat "abc" z) ) )
-(assert (= (Length x) 1 ) )
-(assert (= (Length y) 3 ) )
-(assert (= (Length z) 1 ) )
+(assert (= (str.++ x y) (str.++ "abc" z) ) )
+(assert (= (str.len x) 1 ) )
+(assert (= (str.len y) 3 ) )
+(assert (= (str.len z) 1 ) )
 
 (check-sat)
 (get-model)

@@ -5,7 +5,7 @@
 
 (assert (= y "abcde") )
 (assert (= y x) )
-(assert (<= (Length x) 5) )
+(assert (<= (str.len x) 5) )
 
 
 (check-sat)

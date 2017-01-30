@@ -7,9 +7,9 @@
 (declare-const M String)
 
 
-(assert (= Z (Concat X "gkhi" ) ) )
-(assert (= Z (Concat Y1 Y2   ) ) )
-(assert (= Z (Concat "abcd" M ) ) )
+(assert (= Z (str.++ X "gkhi" ) ) )
+(assert (= Z (str.++ Y1 Y2   ) ) )
+(assert (= Z (str.++ "abcd" M ) ) )
 
 
 (check-sat)

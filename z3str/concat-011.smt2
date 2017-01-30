@@ -4,7 +4,7 @@
 (declare-const b String)
 (declare-const z String)
 
-(assert (= (Concat "test" (Concat "hello" a) ) "testhellonum"))
+(assert (= (str.++ "test" (str.++ "hello" a) ) "testhellonum"))
 
 (check-sat)
 (get-model)

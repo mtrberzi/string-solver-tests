@@ -8,9 +8,9 @@
 
 
 
-(assert (= z (Concat "ef" y2) ) )
-(assert (= z (Concat t_str5 (Concat "ce" m2)) ) )
-(assert (= z (Concat t_str2 "abc@") ) )
+(assert (= z (str.++ "ef" y2) ) )
+(assert (= z (str.++ t_str5 (str.++ "ce" m2)) ) )
+(assert (= z (str.++ t_str2 "abc@") ) )
 
 
 

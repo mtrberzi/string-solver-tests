@@ -9,7 +9,7 @@
 
 (assert (RegexIn x (RegexStar (RegexUnion (Str2Reg "a") (Str2Reg "b") ) ) ) )
 
-(assert (= 3 (Length x) ) )
+(assert (= 3 (str.len x) ) )
 
 (assert (not (= x "abb" ) ) )
 (assert (not (= x "aba" ) ) )

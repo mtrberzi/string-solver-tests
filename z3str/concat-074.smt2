@@ -8,11 +8,11 @@
 (declare-const n1 String)
 (declare-const n2 String)
 
-(assert (= z (Concat x "gkhi" ) ) )
-(assert (= z (Concat y "hi"   ) ) )
-(assert (= z (Concat "abcd" m ) ) )
-(assert (= z (Concat "ab" k ) ) )
-(assert (= z (Concat n1 n2 ) ) )
+(assert (= z (str.++ x "gkhi" ) ) )
+(assert (= z (str.++ y "hi"   ) ) )
+(assert (= z (str.++ "abcd" m ) ) )
+(assert (= z (str.++ "ab" k ) ) )
+(assert (= z (str.++ n1 n2 ) ) )
 
 (check-sat)
 (get-model)

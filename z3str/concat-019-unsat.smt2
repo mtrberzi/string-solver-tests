@@ -2,7 +2,7 @@
 (set-info :status unsat)
 (declare-const a String)
 
-(assert (= (Concat a "testhello") "test" ) )
+(assert (= (str.++ a "testhello") "test" ) )
 
 (check-sat)
 (get-model)

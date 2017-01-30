@@ -9,8 +9,8 @@
 (declare-const Y4 String)
 
 
-(assert (= (Concat x Y1 ) (Concat Y2 y) ) )
-(assert (= (Concat y Y3) (Concat Y4 x) ) )
+(assert (= (str.++ x Y1 ) (str.++ Y2 y) ) )
+(assert (= (str.++ y Y3) (str.++ Y4 x) ) )
 
 
 (check-sat)

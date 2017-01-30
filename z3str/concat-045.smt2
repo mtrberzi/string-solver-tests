@@ -5,8 +5,8 @@
 (declare-const x2 String)
 
 
-(assert (= (Concat x1 (Concat "ef" y2)) (Concat "abc" x2)) )
-(assert (= (Length x1) 4) )
+(assert (= (str.++ x1 (str.++ "ef" y2)) (str.++ "abc" x2)) )
+(assert (= (str.len x1) 4) )
 
 (check-sat)
 (get-model)

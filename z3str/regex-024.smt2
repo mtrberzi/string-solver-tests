@@ -4,9 +4,9 @@
 (declare-const y String)
 
 
-(assert (RegexIn x (RegexStar (RegexConcat (RegexStar (Str2Reg "a") ) (Str2Reg "b") ))))
+(assert (RegexIn x (RegexStar (Regexstr.++ (RegexStar (Str2Reg "a") ) (Str2Reg "b") ))))
 
-(assert (RegexIn y (RegexStar (RegexConcat (RegexStar (Str2Reg "a") ) (Str2Reg "b") ))))
+(assert (RegexIn y (RegexStar (Regexstr.++ (RegexStar (Str2Reg "a") ) (Str2Reg "b") ))))
 
 (check-sat)
 (get-model)

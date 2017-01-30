@@ -3,8 +3,8 @@
 (declare-const x String)
 (declare-const i Int)
 
-(assert (= (Length "abcd") i) )
-(assert (> (Length x) (+ i 1) ) )
+(assert (= (str.len "abcd") i) )
+(assert (> (str.len x) (+ i 1) ) )
 
 (check-sat)
 (get-model)

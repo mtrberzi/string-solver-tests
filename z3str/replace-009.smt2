@@ -17,7 +17,7 @@
 (assert (= m2 (Replace x "b" "_b") ) )
 (assert (= m3 (Replace x "ii" "_i_i") ) )
 
-(assert (= (Length x) 1))
+(assert (= (str.len x) 1))
 
 (check-sat) 
 

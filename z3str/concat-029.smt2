@@ -5,9 +5,9 @@
 (declare-const m String)
 (declare-const n String)
 
-(assert (= (Concat x y) (Concat m n) ) )
-(assert (= (Length m) 0 ) )
-(assert (= (Length n) 1 ) )
+(assert (= (str.++ x y) (str.++ m n) ) )
+(assert (= (str.len m) 0 ) )
+(assert (= (str.len n) 1 ) )
 
 (check-sat)
 (get-model)

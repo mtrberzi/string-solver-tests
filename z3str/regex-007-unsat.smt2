@@ -3,7 +3,7 @@
 (declare-const x String)
 
 
-(assert (= (Length x) 8))
+(assert (= (str.len x) 8))
 (assert (RegexIn x (RegexStar (Str2Reg "ced") ) ) ) 
 (assert (RegexIn x (RegexStar (Str2Reg "abcd") ) ) ) 
 

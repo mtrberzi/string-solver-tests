@@ -7,9 +7,9 @@
 
 (declare-const i Int)
 
-(assert (= (Concat m n) (Concat x y) ) )
-(assert (= (Length x) i ) )
-(assert (= (Length y) 1 ) )
+(assert (= (str.++ m n) (str.++ x y) ) )
+(assert (= (str.len x) i ) )
+(assert (= (str.len y) 1 ) )
 
 (check-sat)
 (get-model)

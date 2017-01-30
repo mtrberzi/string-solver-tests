@@ -3,8 +3,8 @@
 (declare-const X String)
 (declare-const Y String)
 
-(assert (= (Concat X (Concat "ab" Y ) ) (Concat Y (Concat "ba" X ) ) ) )
-(assert (= 2 (Length X) ) )
+(assert (= (str.++ X (str.++ "ab" Y ) ) (str.++ Y (str.++ "ba" X ) ) ) )
+(assert (= 2 (str.len X) ) )
 
 (check-sat)
 (get-model)

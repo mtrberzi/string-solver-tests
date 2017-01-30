@@ -5,7 +5,7 @@
 (declare-const v1 String)
 (declare-const v2 String)
 
-(assert (= (Concat (Concat v1 v2) "e") (Concat x y) ) )
+(assert (= (str.++ (str.++ v1 v2) "e") (str.++ x y) ) )
 
 (check-sat)
 (get-model)

@@ -6,7 +6,7 @@
 
 (assert (RegexIn y (RegexStar (RegexStar (Str2Reg "abcd") ) ) ) )
 
-(assert (= (Length y)  8) )
+(assert (= (str.len y)  8) )
 
 (check-sat)
 (get-model)

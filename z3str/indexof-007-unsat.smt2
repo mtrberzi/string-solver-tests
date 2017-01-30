@@ -5,7 +5,7 @@
 
 (assert (= i (Indexof X "ab") ) )
 (assert (= i 0 ) )
-(assert (= (Length X) 0 ) )
+(assert (= (str.len X) 0 ) )
 
 
 (check-sat)

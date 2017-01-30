@@ -2,7 +2,7 @@
 (set-info :status sat)
 (declare-const a String)
 
-(assert (= (Concat a "") "num" ) )
+(assert (= (str.++ a "") "num" ) )
 
 (check-sat)
 (get-model)

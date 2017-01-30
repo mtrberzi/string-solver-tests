@@ -1,10 +1,10 @@
 (set-logic QF_S)
-(set-info :status sat)
+(set-info :status unsat)
 
 (declare-const x String)
 (declare-const y String)
 
-(assert (= (Length x) 2))
+(assert (= (str.len x) 2))
 ; (assert (RegexIn x (RegexStar (RegexCharRange "a" "b"))))
 (assert (= x y))
 (assert (RegexIn y (RegexStar (RegexCharRange "a" "b"))))

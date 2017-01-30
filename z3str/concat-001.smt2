@@ -5,7 +5,7 @@
 (declare-const y2 String)
 
 
-(assert (= x ( Concat ( Concat "te" y1 ) ( Concat "st" y2 ) ) ) )
+(assert (= x ( str.++ ( str.++ "te" y1 ) ( str.++ "st" y2 ) ) ) )
 
 
 (check-sat)

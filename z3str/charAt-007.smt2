@@ -6,11 +6,11 @@
 
 (assert (= "b" (CharAt x i) ) )
 
-(assert (and (>= i 4) (< i (Length x))))
+(assert (and (>= i 4) (< i (str.len x))))
 
-(assert (< (Length x) 7))
+(assert (< (str.len x) 7))
 
-(assert (> (Length x) 2))
+(assert (> (str.len x) 2))
 
 
 (check-sat)

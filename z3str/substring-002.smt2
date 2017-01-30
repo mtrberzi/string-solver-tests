@@ -6,7 +6,7 @@
 
 
 (assert (= "efgh" (Substring x vi1 vi2) ) )
-(assert (= (Length x) 4) )
+(assert (= (str.len x) 4) )
 
 
 (check-sat)

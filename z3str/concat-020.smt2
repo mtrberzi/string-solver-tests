@@ -3,7 +3,7 @@
 (declare-const a String)
 (declare-const b String)
 
-(assert (= (Concat a b) "" ) )
+(assert (= (str.++ a b) "" ) )
 
 (check-sat)
 (get-model)

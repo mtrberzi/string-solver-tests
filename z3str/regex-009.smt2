@@ -7,9 +7,9 @@
 (assert (RegexIn x (RegexStar (Str2Reg "abcd") ) ) )
 (assert (RegexIn x (RegexStar (Str2Reg "abcdabcd") ) ) )
 
-(assert (> (Length x) 20) )
+(assert (> (str.len x) 20) )
 
-(assert (< (Length x) 25) )
+(assert (< (str.len x) 25) )
 
 (check-sat)
 (get-model)
