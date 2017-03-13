@@ -1,4 +1,5 @@
 (set-info :status sat)
 
-(assert (= 3 (str.to.int "3")))
+(assert (= "42" (int.to.str 42)))
 (check-sat)
+
