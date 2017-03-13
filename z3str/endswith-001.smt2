@@ -4,7 +4,7 @@
 (declare-const z String)
 (declare-const b1 Bool)
 
-(assert (= true (EndsWith x "nba") ) )
+(assert (= true (str.suffixof x "nba") ) )
 
 
 

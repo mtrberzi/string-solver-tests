@@ -4,7 +4,7 @@
 (declare-const z String)
 (declare-const b1 Bool)
 
-(assert (= b1 (StartsWith "anba" "nba") ) )
+(assert (= b1 (str.prefixof "nba" "anba") ) )
 
 
 
